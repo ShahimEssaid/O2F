@@ -1,0 +1,229 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "http://O5.32R4-mapping",
+    "type": "object",
+    "properties": {
+        "PERSON": {
+            "$ref": "#/$defs/person"
+        },
+        "VISIT_OCCURRENCE": {
+            "$ref": "#/$defs/visit_occurrence"
+        }
+    },
+    "$defs": {
+        "person": {
+            "type": "object",
+            "properties": {
+                "person_id": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "gender_concept_id": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "year_of_birth": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "month_of_birth": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "day_of_birth": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "birth_datetime": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "race_concept_id": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "ethnicity_concept_id": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "location_id": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "provider_id": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "care_site_id": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "person_source_value": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "gender_soruce_value": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "gender_source_concept_id": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "race_source_value": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "race_source_concept_id": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "ethnicity_source_value": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "ethnicity_source_concept_id": {
+                    "$ref": "#/$defs/field_object"
+                }
+            },
+            "additionalProperties": false
+        },
+        "visit_occurrence": {
+            "type": "object",
+            "properties": {
+                "visit_occurrence_id": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "person_id": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "visit_concept_id": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "visit_start_date": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "visit_start_datetime": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "visit_end_date": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "visit_end_datetime": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "visit_type_concept_id": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "provider_id": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "care_site_id": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "visit_source_value": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "visit_source_concept_id": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "admitting_source_concept_id": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "admitting_source_value": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "discharge_to_concept_id": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "discharge_to_source_value": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "preceding_visit_occurrence_id": {
+                    "$ref": "#/$defs/field_object"
+                }
+            },
+            "additionalProperties": false
+        },
+        "field_object": {
+            "type": "object",
+            "properties": {
+                "Field Description": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Field Comments": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Field Value Mappings": {
+                    "type": "object",
+                    "$ref": "#/$defs/field_value_mappings"
+                }
+            },
+            "additionalProperties": false
+        },
+        "field_value_mappings": {
+            "type": "object",
+            "additionalProperties": {
+                "$ref": "#/$defs/field_value_mapping"
+            }
+        },
+        "field_value_mapping": {
+            "type": "object",
+            "properties": {
+                "Value": {
+                    "type": "string"
+                },
+                "Vocabulary": {
+                    "type": "string"
+                },
+                "Unit": {
+                    "type": "string"
+                },
+                "Display": {
+                    "type": "string"
+                },
+                "Description": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Comments": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Possible FHIR Mappings": {
+                    "$ref": "#/$defs/fhir_mappings"
+                }
+            },
+            "additionalProperties": false
+        },
+        "fhir_mappings": {
+            "type": "object",
+            "additionalProperties": {
+                "$ref": "#/$defs/fhir_mapping"
+            }
+        },
+        "fhir_mapping": {
+            "type": "object",
+            "properties": {
+                "Description": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Comments": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Resource(s)": {
+                    "$ref": "#/$defs/fhir_resources"
+                }
+            },
+            "additionalProperties": false
+        },
+        "fhir_resources": {
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/fhir_resource"
+            }
+        },
+        "fhir_resource": {
+            "$ref": "r4-resources.json#"
+        }
+    }
+}

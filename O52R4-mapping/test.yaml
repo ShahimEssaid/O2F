@@ -1,0 +1,35 @@
+VISIT_OCCURRENCE:
+  visit_occurrence_id:
+    Field Description:
+      - Some description about the field as defined in OMOP, or as used in your instance.
+      - Another description paragraph, and more as needed.
+    Field Comments:
+      - Some comments here that are not part of the description.
+      - These could be issues, todos, etc. for this field.
+    Field Value Mappings:
+      Some arbitrary key for the value mapping object being held by this key. Make it short, descriptive, and unique. It can be the value itself if that's unique enough for your use case:
+        Value: the exact value in the field
+        Display: the display/label
+        Description:
+          - A description line.
+          - Another line.
+        Comments:
+          - ""
+        Unit: if there is a unit with this value
+        Vocabulary: the vocabulary id if needed.
+        Possible FHIR Mappings:
+          some arbitrary key to this FHIR mapping:
+            Description:
+              - ""
+            Comments:
+              - ""
+            Resource(s): # this is a list/array of FHIR resourcce instances. Create one or more entries, set the resourceType first, and then you'll get Resource based autocomplete and validation as much as possible.
+              - resourceType: Encounter
+                identifier:
+                  - system: http://system/identifier/one
+                class:
+                  system: http://system/coding/one
+
+# The schema currently supports autocompletion for "system" values for Identifier and Coding to make sure it's easy to populate those systems, and do it correctly.
+# You need to add your systems to the .schemas/coding-systems.json and .schemas/identifier-systems.json files in order to use them in the *.yaml files.
+
