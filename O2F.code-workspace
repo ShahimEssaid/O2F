@@ -6,11 +6,11 @@
 	],
 	"settings": {
 		"json.schemas": [{
-			"fileMatch": ["/O52R4-mapping/*.json"],
-			"url": "./.schemas/O52R4-mapping.json"
+			"fileMatch": ["/O52R4-mapping-v1/*.json"],
+			"url": "./.schemas/O52R4-mapping-v1.json"
 		}],
 		"yaml.schemas": {
-			"./.schemas/O52R4-mapping.json": "/O52R4-mapping/*.yaml"
+			"./.schemas/O52R4-mapping-v1.json": "/O52R4-mapping-v1/*.yaml"
 		},
 		"editor.tabSize": 2,
 		"editor.detectIndentation": false
