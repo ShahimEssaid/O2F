@@ -67,6 +67,9 @@
                 },
                 "ethnicity_source_concept_id": {
                     "$ref": "#/$defs/field_object"
+                },
+                "null_field": {
+                    "$ref": "#/$defs/field_object"
                 }
             },
             "additionalProperties": false
@@ -123,6 +126,9 @@
                     "$ref": "#/$defs/field_object"
                 },
                 "preceding_visit_occurrence_id": {
+                    "$ref": "#/$defs/field_object"
+                },
+                "null_field": {
                     "$ref": "#/$defs/field_object"
                 }
             },

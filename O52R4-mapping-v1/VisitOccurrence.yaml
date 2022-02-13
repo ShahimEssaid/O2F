@@ -1,0 +1,31 @@
+VISIT_OCCURRENCE:
+  null_field:
+    Field Value Mappings:
+      a mapping for FHIR Encounter status:
+        Possible FHIR Mappings:
+          a status mapping:
+            Resource(s):
+              - resourceType: Encounter
+                status: finished
+                # Ignore below. They are only needed to meet schema requirements and eliminate IDE errors.
+                class: {}
+  visit_occurrence_id:
+    Field Value Mappings:
+      a 123 value:
+        Value: "123"
+        Description:
+          - ""
+        Comments:
+          - Map the OMOP id both as a resource id but also keep it as business identifier so it's maintained if this resource instance is cloned to another FHIR server, in which case the id will likely be lost.
+          - Maps to ESP.Encounter.natural_key
+        Possible FHIR Mappings:
+          first mapping option:
+            Resource(s):
+              - resourceType: Encounter
+                id: "123"
+                identifier:
+                  - value: "123"
+                    # We only use the codes/abbreviations here since we want to avoid hard coding the system url value in this file. It will be looked up during the mapping implementation.
+                    system: omop-id
+                # Ignore below.
+                class: {}

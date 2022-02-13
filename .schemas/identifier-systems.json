@@ -9,8 +9,7 @@
                 },
                 {
                     "enum": [
-                        "http://system/identifier/one",
-                        "http://system/identifier/two"
+                        "omop-id"
                     ]
                 }
             ]
