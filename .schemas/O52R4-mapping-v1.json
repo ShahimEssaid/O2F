@@ -151,6 +151,9 @@
                 },
                 "Field Value Mappings": {
                     "type": "object",
+                    "propertyNames":{
+                      "type": "string"
+                    },
                     "$ref": "#/$defs/field_value_mappings"
                 }
             },
@@ -197,6 +200,9 @@
         },
         "fhir_mappings": {
             "type": "object",
+            "propertyNames":{
+              "type": "string"
+            },
             "additionalProperties": {
                 "$ref": "#/$defs/fhir_mapping"
             }

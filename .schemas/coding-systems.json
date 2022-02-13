@@ -9,7 +9,7 @@
                 },
                 {
                     "enum": [
-                        "http://system/coding/one",
+                        "http://terminology.hl7.org/CodeSystem/v3-ActCode",
                         "http://system/coding/two"
                     ]
                 }

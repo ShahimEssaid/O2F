@@ -1,5 +1,5 @@
 VISIT_OCCURRENCE:
-  null_field: # this is a placeholder field/column that does not exist in OMOP but allows for holding mapping info still needed for FHIR but that's not based on an OMOP column/value as an input.
+  null_field:
     Field Value Mappings:
       a mapping for FHIR Encounter status:
         Possible FHIR Mappings:
@@ -9,7 +9,6 @@ VISIT_OCCURRENCE:
                 status: finished
                 # Ignore below. They are only needed to meet schema requirements and eliminate IDE errors.
                 class: {}
-
   visit_occurrence_id:
     Field Value Mappings:
       a 123 value:
@@ -30,16 +29,3 @@ VISIT_OCCURRENCE:
                     system: omop-id
                 # Ignore below.
                 class: {}
-  visit_concept_id:
-    Field Value Mappings:
-      "8863 SE mapping":
-        Value: "8863"
-        Display: Skilled Nursing Facility
-        Possible FHIR Mappings:
-          first mapping:
-            Resource(s):
-              - resourceType: Encounter
-                class:
-                  code: AMB
-                  display: ambulatory
-                  system: http://terminology.hl7.org/CodeSystem/v3-ActCode
