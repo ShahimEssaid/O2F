@@ -8,100 +8,69 @@
     },
     "VISIT_OCCURRENCE": {
       "$ref": "#/$defs/visit_occurrence"
-    },
-    "Global Vars": {
-      "type": "object",
-      "patternProperties": {
-        "^\\$G\\.[a-zA-Z0-9.-]+$": {
-          "$ref": "#/$defs/var"
-        }
-      },
-      "propertyNames": {
-        "type": "string"
-      },
-      "additionalProperties": false
     }
   },
-  "patternProperties": {
-    "x_.+": true
-  },
-  "additionalProperties": false,
   "$defs": {
     "person": {
       "type": "object",
       "properties": {
         "person_id": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "gender_concept_id": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "year_of_birth": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "month_of_birth": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "day_of_birth": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "birth_datetime": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "race_concept_id": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "ethnicity_concept_id": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "location_id": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "provider_id": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "care_site_id": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "person_source_value": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "gender_soruce_value": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "gender_source_concept_id": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "race_source_value": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "race_source_concept_id": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "ethnicity_source_value": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "ethnicity_source_concept_id": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "null_field": {
-          "$ref": "#/$defs/field"
-        },
-        "Table Vars": {
-          "type": "object",
-          "patternProperties": {
-            "^\\$T\\.[a-zA-Z0-9.-]+$": {
-              "$ref": "#/$defs/var"
-            }
-          },
-          "propertyNames": {
-            "type": "string"
-          },
-          "additionalProperties": false
+          "$ref": "#/$defs/field_object"
         }
-      },
-      "patternProperties": {
-        "x_.+": true
       },
       "additionalProperties": false
     },
@@ -109,78 +78,63 @@
       "type": "object",
       "properties": {
         "visit_occurrence_id": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "person_id": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "visit_concept_id": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "visit_start_date": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "visit_start_datetime": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "visit_end_date": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "visit_end_datetime": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "visit_type_concept_id": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "provider_id": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "care_site_id": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "visit_source_value": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "visit_source_concept_id": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "admitting_source_concept_id": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "admitting_source_value": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "discharge_to_concept_id": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "discharge_to_source_value": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "preceding_visit_occurrence_id": {
-          "$ref": "#/$defs/field"
+          "$ref": "#/$defs/field_object"
         },
         "null_field": {
-          "$ref": "#/$defs/field"
-        },
-        "Table Vars": {
-          "type": "object",
-          "patternProperties": {
-            "^\\$T\\.[a-zA-Z0-9.-]+$": {
-              "$ref": "#/$defs/var"
-            }
-          },
-          "propertyNames": {
-            "type": "string"
-          },
-          "additionalProperties": false
+          "$ref": "#/$defs/field_object"
         }
-      },
-      "patternProperties": {
-        "x_.+": true
       },
       "additionalProperties": false
     },
-    "field": {
+    "field_object": {
       "type": "object",
       "properties": {
         "Field Description": {
@@ -195,18 +149,6 @@
             "type": "string"
           }
         },
-        "Field Vars": {
-          "type": "object",
-          "patternProperties": {
-            "^\\$F\\.[a-zA-Z0-9.-]+$": {
-              "$ref": "#/$defs/var"
-            }
-          },
-          "propertyNames": {
-            "type": "string"
-          },
-          "additionalProperties": false
-        },
         "Field Values": {
           "type": "object",
           "propertyNames": {
@@ -218,19 +160,12 @@
           "$ref": "#/$defs/fhir_templates"
         }
       },
-      "patternProperties": {
-        "x_.+": true
-      },
       "additionalProperties": false
     },
     "field_values": {
-      "$comment": "Arbitrary object keys but can be reduced to the value itself if uniqueness is guaranteed",
-      "type": "object",
-      "additionalProperties": {
-        "$ref": "#/$defs/field_value"
-      },
-      "propertyNames": {
-        "type": "string"
+      "type": "array",
+      "items": {
+        "$ref": "#/defs/field_value"
       }
     },
     "field_value": {
@@ -263,34 +198,21 @@
             "type": "string"
           }
         },
-        "Value Mapping Vars": {
-          "$ref": "#/$defs/vars-entries"
+        "Mappings": {
+          "$ref": "#/$defs/value_mappings"
         }
-      },
-      "patternProperties": {
-        "x_.+": true
-      },
-      "additionalProperties": false
+      }
     },
-    "vars-entries": {
+    "field_value_mappings": {
       "type": "object",
       "propertyNames": {
         "type": "string"
       },
       "additionalProperties": {
-        "$ref": "#/$defs/vars"
+        "$ref": "#/$defs/field_value_mapping"
       }
     },
-    "vars": {
-      "type": "object",
-      "patternProperties": {
-        "^\\$V.[a-zA-Z0-9.-]+$": {
-          "$ref": "#/$defs/var"
-        }
-      },
-      "additionalProperties": false
-    },
-    "var": {
+    "field_value_mapping": {
       "type": "object",
       "properties": {
         "Value": {
@@ -308,6 +230,9 @@
             "type": "string"
           }
         }
+      },
+      "additionalProperties": {
+        
       }
     },
     "fhir_templates": {
@@ -316,7 +241,7 @@
         "type": "string"
       },
       "additionalProperties": {
-        "$ref": "#/$defs/fhir_template"
+        "$ref": "#/$defs/fhir_mapping"
       }
     },
     "fhir_template": {

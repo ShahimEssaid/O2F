@@ -1,0 +1,140 @@
+VISIT_OCCURRENCE:
+  visit_occurrence_id:
+    FHIR Templates:
+      shahim:
+        Description:
+          - "Map the OMOP key to both FHIR id and as an identifier as well."
+        Resource(s):
+          # first FHIR resource needed for this template. No other resources needed in this case.
+          - resourceType: Encounter
+            id: $F.self
+            identifier:
+              # An entry in the identifier array
+              - value: $F.self
+                system: omop-id
+  visit_concept_id:
+    FHIR Templates:
+      shahim's:
+        Resource(s):
+          - resourceType: Encounter
+            class:
+              code: $V.class.code
+              display: $V.class.display
+              system: http://terminology.hl7.org/CodeSystem/v3-ActCode
+            classHistory:
+              - class:
+                  code: $V.classHistory.code
+                  display: $V.classHistory.display
+                  system: http://terminology.hl7.org/CodeSystem/v3-ActCode
+                period: {}
+            type:
+              - coding:
+                  - code: $V.type.1.code
+                    display: $V.type.1.display
+                    system: $V.type.1.system
+              - coding:
+                  - code: $V.type.2.code
+                    display: $V.type.2.display
+                    system: $V.type.2.system
+
+    Field Values:
+      8863 entry:
+        Value: "8863"
+        Displays:
+          - Skilled Nursing Facility
+        Value Mapping Vars:
+          shahim's:
+            $V.class.code:
+              Value: AMB
+            $V.class.display:
+              Value: ambulatory
+            $V.type.1.code:
+              Value: "207195004"
+            $V.type.1.display:
+              Value: History and physical examination with evaluation and management of nursing facility patient
+            $V.type.1.system:
+              Value: http://snomed.info/sct
+
+      9202 entry:
+        Value: "9202"
+        Displays:
+          - Outpatient Visit
+        Value Mapping Vars:
+          shahim's:
+            $V.class.code:
+              Value: AMB
+            $V.class.display:
+              Value: ambulatory
+
+            $V.type.1.code:
+              Value: "108219001"
+            $V.type.1.display:
+              Value: Physician visit with evaluation AND/OR management service
+            $V.type.1.system:
+              Value: http://snomed.info/sct
+
+      "9203 entry":
+        Value: "9203"
+        Displays:
+          - Emergency Room Visit
+        Value Mapping Vars:
+          shahim's:
+            $V.class.code:
+              Value: EMER
+            $V.class.display:
+              Value: emergency
+
+            $V.type.1.code:
+              Value: "4525004"
+            $V.type.1.display:
+              Value: Emergency department patient visit
+            $V.type.1.system:
+              Value: http://snomed.info/sct
+
+      "262 entry":
+        Value: "262"
+        Displays:
+          - Emergency Room and Inpatient Visit
+        Value Mapping Vars:
+          shahim's:
+            $V.class.code:
+              Value: IMP
+            $V.class.display:
+              Value: inpatient encounter
+
+            $V.classHistory.code:
+              Value: EMER
+            $V.classHistory.display:
+              Value: emergency
+
+            $V.type.1.code:
+              Value: "86181006"
+            $V.type.1.display:
+              Value: Evaluation and management of inpatient
+            $V.type.1.system:
+              Value: http://snomed.info/sct
+
+            $V.type.2.code:
+              Value: "4525004"
+            $V.type.2.display:
+              Value: Emergency department patient visit
+            $V.type.2.system:
+              Value: http://snomed.info/sct
+
+      "9201 entry":
+        Value: "9201"
+        Displays:
+          - Inpatient Visit
+        Value Mapping Vars:
+          shahim's:
+            "$V.class.code":
+              Value: IMP
+            "$V.class.display":
+              Value: inpatient encounter
+
+            $V.type.1.code:
+              Value: "86181006"
+            $V.type.1.display:
+              Value: Evaluation and management of inpatient
+            $V.type.1.system:
+              Value: http://snomed.info/sct

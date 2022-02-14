@@ -1071,7 +1071,7 @@
       "description": "A rational number with implicit precision"
     },
     "id": {
-      "pattern": "^[A-Za-z0-9\\-\\.]{1,64}$",
+      "pattern": "^[$A-Za-z0-9\\-\\.]{1,64}$",
       "type": "string",
       "description": "Any combination of letters, numerals, \"-\" and \".\", with a length limit of 64 characters.  (This might be an integer, an unprefixed OID, UUID or any other identifier pattern that meets these constraints.)  Ids are case-insensitive."
     },
@@ -1673,7 +1673,7 @@
         },
         "system": {
           "description": "Establishes the namespace for the value - that is, a URL that describes a set values that are unique.",
-          "$ref": "identifier-systems.json#/$defs/systems"
+          "$ref": "r4-resources.json#/$defs/uri"
         },
         "_system": {
           "description": "Extensions for system",
@@ -1748,7 +1748,7 @@
         },
         "system": {
           "description": "The identification of the code system that defines the meaning of the symbol in the code.",
-          "$ref": "coding-systems.json#/$defs/systems"
+          "$ref": "r4-resources.json#/$defs/uri"
         },
         "_system": {
           "description": "Extensions for system",
@@ -23322,7 +23322,6 @@
       },
       "additionalProperties": false,
       "required": [
-        "class",
         "resourceType"
       ],
       "type": "object"
